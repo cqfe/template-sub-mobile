@@ -1,0 +1,27 @@
+{
+  "name": "template-taro",
+  "version": "1.0.0",
+  "private": true,
+  "description": "tarojs + vuejs + nutui模版",
+  "templateInfo": {
+    "name": "vue3-NutUI",
+    "typescript": false,
+    "css": "Sass",
+    "framework": "Vue3"
+  },
+  "scripts": {
+    "build:wx": "taro build --type weapp",
+    "build:h5": "taro build --type h5",
+    "dev:wx": "npm run build:weapp -- --watch",
+    "dev:h5": "npm run build:h5 -- --watch"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "Android >= 4.1",
+    "ios >= 8"
+  ],
+  "author": "leo",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
