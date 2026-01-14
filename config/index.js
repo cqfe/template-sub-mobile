@@ -25,7 +25,7 @@ export default defineConfig(async (merge, { command, mode }) => {
       data: '@import "@nutui/nutui-taro/dist/styles/variables-jdt.scss";',
     },
     cache: {
-      enable: true,
+      enable: false,
     },
     designWidth(input) {
       // 配置 NutUI 375 尺寸
@@ -33,7 +33,7 @@ export default defineConfig(async (merge, { command, mode }) => {
         return 375
       }
       // 全局使用 Taro 默认的 750 尺寸
-      return 750
+      return 375
     },
     deviceRatio: {
       640: 2.34 / 2,
@@ -52,8 +52,14 @@ export default defineConfig(async (merge, { command, mode }) => {
     framework: 'vue3',
     compiler: {
       type: 'webpack5',
+      prebundle: {
+        enable: false,
+      },
     },
     mini: {
+      miniCssExtractPluginOption: {
+        ignoreOrder: true,
+      },
       postcss: {
         pxtransform: {
           enable: true,
