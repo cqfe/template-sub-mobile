@@ -7,7 +7,7 @@ import ComponentsPlugin from 'unplugin-vue-components/webpack'
 
 const ROOT_PATH = path.resolve(__dirname, '../../..')
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
-export default defineConfig(async (merge, { command, mode }) => {
+export default defineConfig(async (merge, { _command, _mode }) => {
   const baseConfig = {
     projectName: 'template-taro',
     date: '2024-11-7',
